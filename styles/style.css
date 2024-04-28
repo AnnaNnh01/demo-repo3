@@ -1,0 +1,51 @@
+@import url(.header.css);
+@import url(.nav.css);
+@import url(.main.css);
+@import url(.footer.css);
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "main main main main main aside"
+    "footer footer footer footer footer footer";
+  grid-template-rows: 20vh 1fr 60vh 20vh;
+  /* gap: 1rem; */
+}
+@media (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "nav nav nav nav nav nav"
+      "header header header header header header"
+      "main main main main main main"
+      "aside aside aside aside aside aside"
+      "footer footer footer footer footer footer";
+    grid-template-rows: 20vh 1fr 60vh 1fr 20vh;
+  }
+}
+
+.header {
+  grid-area: header;
+  background: red;
+}
+.nav {
+  grid-area: nav;
+  background: green;
+}
+.main {
+  grid-area: main;
+  background: yellow;
+}
+.aside {
+  grid-area: aside;
+  background: gray;
+}
+
+.footer {
+  grid-area: footer;
+  background: blue;
+}
+
+
